@@ -1,7 +1,7 @@
 *IMPORTANT*
 This basic proyect is for show ddd (https://www.paradigmadigital.com/dev/ddd-dominio-implica-crecer-fuerte/) with golang, remember, ddd can be implemented in many ways depending on the author!
 
-# Web Service Restaurant
+# Web Service Customers
 WS for 99mminutos orders created for final users.
 
 # Start 🚀
