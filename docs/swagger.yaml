@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: 99minutos
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /order/632592a9366ebbe53ac2c2bf:
+    get:
+      tags:
+        - General
+      summary: Consultar por id una orden
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /order/status/6325f752b09e8285aaa78a71/aaa:
+    post:
+      tags:
+        - General
+      summary: Crear una orden
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                from_address:
+                  address: 'Calle 2C #73-127'
+                  zipcode: '700019'
+                  region: Valle del cauca
+                  region_id: 1
+                to_address:
+                  address: 'Calle 2C #73-127'
+                  zipcode: '700019'
+                  region: Valle del cauca
+                  region_id: 1
+                from_coordinates: 24.53525235, 23.45235
+                to_coordinates: 24.53525235, 23.45235
+                total_items: 2
+                items:
+                  - weight: 2
+                  - weight: 16
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /order/status/6325f752b09e8285aaa78a71/en_estacion:
+    put:
+      tags:
+        - General
+      summary: Actualizar estado de la orden
+      requestBody:
+        content: {}
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

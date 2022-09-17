@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "34dad6b4-e8e9-4b8f-85e3-c0c95262ebe6",
+		"name": "99minutos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9803429"
+	},
+	"item": [
+		{
+			"name": "Consultar por id una orden",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/632592a9366ebbe53ac2c2bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"632592a9366ebbe53ac2c2bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"from_address\": {\n        \"address\": \"Calle 2C #73-127\",\n        \"zipcode\": \"700019\",\n        \"region\": \"Valle del cauca\",\n        \"region_id\": 1\n    },\n    \"to_address\": {\n        \"address\": \"Calle 2C #73-127\",\n        \"zipcode\": \"700019\",\n        \"region\": \"Valle del cauca\",\n        \"region_id\": 1\n    },\n    \"from_coordinates\": \"24.53525235, 23.45235\",\n    \"to_coordinates\": \"24.53525235, 23.45235\",\n    \"total_items\": 2,\n    \"items\": [\n        {\n            \"weight\": 2\n        },\n        {\n            \"weight\": 16\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/status/6325f752b09e8285aaa78a71/aaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"status",
+						"6325f752b09e8285aaa78a71",
+						"aaa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar estado de la orden",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/status/6325f752b09e8285aaa78a71/en_estacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"status",
+						"6325f752b09e8285aaa78a71",
+						"en_estacion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
